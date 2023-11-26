@@ -18,7 +18,7 @@ class PriceCalculatorController < ApplicationController
     item_quantity.each do |key, value|
       next if value == 0
       item_price = PriceCalculatorHelper.price_of_item(key, value.to_i)
-      item_details << {item: key, quantity: value, cost: item_price[:price].round(2), key: SecureRandom.uuid}
+      item_details << {item: key, quantity: value, cost: item_price[:price].round(2), key: SecureRandom.uuid, image_url: item_price[:image_url]}
 
       total_cost += item_price[:price]
       savings += item_price[:savings]

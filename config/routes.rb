@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/getItems', to: 'price_calculator#getItems'
   post '/totalCost', to: 'price_calculator#totalCost'
   get '/price', to: 'price_calculator#getPrice'
+  post '/create', to: 'orders#create'
+  get '/get_orders', to: 'orders#getOrders'
 end
